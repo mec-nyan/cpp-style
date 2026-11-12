@@ -2,45 +2,45 @@
 Language:        Cpp
 AccessModifierOffset: -4
 AlignAfterOpenBracket: Align
-AlignArrayOfStructures: None
+AlignArrayOfStructures: Left
 AlignConsecutiveAssignments:
   Enabled:         true
   AcrossEmptyLines: false
-  AcrossComments:  false
-  AlignCompound:   false
-  AlignFunctionDeclarations: false
+  AcrossComments:  true
+  AlignCompound:   true
+  AlignFunctionDeclarations: true
   AlignFunctionPointers: false
   PadOperators:    true
 AlignConsecutiveBitFields:
   Enabled:         true
   AcrossEmptyLines: false
-  AcrossComments:  false
-  AlignCompound:   false
-  AlignFunctionDeclarations: false
-  AlignFunctionPointers: false
-  PadOperators:    false
+  AcrossComments:  true
+  AlignCompound:   true
+  AlignFunctionDeclarations: true
+  AlignFunctionPointers: true
+  PadOperators:    true
 AlignConsecutiveDeclarations:
   Enabled:         true
   AcrossEmptyLines: false
-  AcrossComments:  false
-  AlignCompound:   false
+  AcrossComments:  true
+  AlignCompound:   true
   AlignFunctionDeclarations: true
-  AlignFunctionPointers: false
-  PadOperators:    false
+  AlignFunctionPointers: true
+  PadOperators:    true
 AlignConsecutiveMacros:
-  Enabled:         false
+  Enabled:         true
   AcrossEmptyLines: false
-  AcrossComments:  false
-  AlignCompound:   false
-  AlignFunctionDeclarations: false
-  AlignFunctionPointers: false
-  PadOperators:    false
+  AcrossComments:  true
+  AlignCompound:   true
+  AlignFunctionDeclarations: true
+  AlignFunctionPointers: true
+  PadOperators:    true
 AlignConsecutiveShortCaseStatements:
   Enabled:         true
   AcrossEmptyLines: false
-  AcrossComments:  false
-  AlignCaseArrows: false
-  AlignCaseColons: false
+  AcrossComments:  true
+  AlignCaseArrows: true
+  AlignCaseColons: true
 AlignConsecutiveTableGenBreakingDAGArgColons:
   Enabled:         false
   AcrossEmptyLines: false
@@ -69,20 +69,20 @@ AlignEscapedNewlines: Right
 AlignOperands:   Align
 AlignTrailingComments:
   Kind:            Always
-  OverEmptyLines:  0
+  OverEmptyLines:  2
 AllowAllArgumentsOnNextLine: true
 AllowAllParametersOfDeclarationOnNextLine: true
 AllowBreakBeforeNoexceptSpecifier: Never
-AllowShortBlocksOnASingleLine: Never
+AllowShortBlocksOnASingleLine: Always
 AllowShortCaseExpressionOnASingleLine: true
 AllowShortCaseLabelsOnASingleLine: false
 AllowShortCompoundRequirementOnASingleLine: true
-AllowShortEnumsOnASingleLine: false
-AllowShortFunctionsOnASingleLine: None
-AllowShortIfStatementsOnASingleLine: Never
+AllowShortEnumsOnASingleLine: true
+AllowShortFunctionsOnASingleLine: All
+AllowShortIfStatementsOnASingleLine: AllIfsAndElse
 AllowShortLambdasOnASingleLine: All
-AllowShortLoopsOnASingleLine: false
-AllowShortNamespacesOnASingleLine: false
+AllowShortLoopsOnASingleLine: true
+AllowShortNamespacesOnASingleLine: true
 AlwaysBreakAfterDefinitionReturnType: None
 AlwaysBreakBeforeMultilineStrings: false
 AttributeMacros:
