@@ -177,12 +177,12 @@ InsertBraces:    false
 InsertNewlineAtEOF: false
 InsertTrailingCommas: None
 IntegerLiteralSeparator:
-  Binary:          0
-  BinaryMinDigits: 0
-  Decimal:         0
-  DecimalMinDigits: 0
-  Hex:             0
-  HexMinDigits:    0
+  Binary:          4
+  BinaryMinDigits: 5
+  Decimal:         3
+  DecimalMinDigits: 4
+  Hex:             2
+  HexMinDigits:    3
 JavaScriptQuotes: Leave
 JavaScriptWrapImports: true
 KeepEmptyLines:
@@ -237,12 +237,12 @@ SortJavaStaticImport: Before
 SortUsingDeclarations: LexicographicNumeric
 SpaceAfterCStyleCast: false
 SpaceAfterLogicalNot: true
-SpaceAfterOperatorKeyword: true
-SpaceAfterTemplateKeyword: true
+SpaceAfterOperatorKeyword: false
+SpaceAfterTemplateKeyword: false
 SpaceAroundPointerQualifiers: Default
 SpaceBeforeAssignmentOperators: true
 SpaceBeforeCaseColon: false
-SpaceBeforeCpp11BracedList: false
+SpaceBeforeCpp11BracedList: true
 SpaceBeforeCtorInitializerColon: true
 SpaceBeforeInheritanceColon: true
 SpaceBeforeJsonColon: false
