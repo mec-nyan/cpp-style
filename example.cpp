@@ -38,32 +38,26 @@ namespace mazs
 	};
 
 	// TODO: Just for fun, implement formatter for Quadrant.
-	std::unordered_map<Quadrant, std::string> cardinal_points{
-		{ Quadrant::centre, "Centre" },
-		{ Quadrant::south, "South" },
-		{ Quadrant::west, "West" },
-		{ Quadrant::north, "North" },
-		{ Quadrant::east, "East" },
-		{ Quadrant::south_east, "South east" },
-		{ Quadrant::south_west, "South west" },
-		{ Quadrant::north_east, "North east" },
-		{ Quadrant::north_west, "North west" },
+	std::unordered_map<Quadrant, std::string> cardinal_points {
+		{Quadrant::centre,     "Centre"    },
+		{Quadrant::south,      "South"     },
+		{Quadrant::west,       "West"      },
+		{Quadrant::north,      "North"     },
+		{Quadrant::east,       "East"      },
+		{Quadrant::south_east, "South east"},
+		{Quadrant::south_west, "South west"},
+		{Quadrant::north_east, "North east"},
+		{Quadrant::north_west, "North west"},
 	};
 
 	class Point
 	{
 	public:
-		Point()
-		{
-		}
+		Point() {}
 
-		Point( int x, int y ) : _x{ x }, _y{ y }
-		{
-		}
+		Point( int x, int y ) : _x { x }, _y { y } {}
 
-		~Point()
-		{
-		}
+		~Point() {}
 
 		auto x() const -> int;
 		auto y() const -> int;
@@ -76,8 +70,8 @@ namespace mazs
 		auto where_am_i() -> Quadrant;
 
 	private:
-		int _x{ 0 };
-		int _y{ 0 };
+		int _x { 0 };
+		int _y { 0 };
 	};
 
 }  // namespace mazs
@@ -86,41 +80,26 @@ namespace mazs
 auto run() -> int;
 
 
-auto main( int argc, char* argv[] ) -> int
-{
-	return run();
-}
+auto main( int argc, char* argv[] ) -> int { return run(); }
 
 
 // Namespaces and declarations (usually on an implementation file):
 namespace mazs
 {
-	auto add_stuff( int a, int b ) -> int
-	{
-		return a + b;
-	}
+	auto add_stuff( int a, int b ) -> int { return a + b; }
 
 	auto accumulate_numeric( const std::vector<int>& v ) -> double
 	{
-		double result{ 0 };
+		double result { 0 };
 
-		for ( auto& n : v )
-		{
-			result += n;
-		}
+		for ( auto& n : v ) { result += n; }
 
 		return result;
 	}
 
-	auto Point::x() const -> int
-	{
-		return _x;
-	}
+	auto Point::x() const -> int { return _x; }
 
-	auto Point::y() const -> int
-	{
-		return _y;
-	}
+	auto Point::y() const -> int { return _y; }
 
 	auto Point::move( int x, int y ) -> Point&
 	{
@@ -156,14 +135,8 @@ namespace mazs
 	{
 		if ( _x > 0 )
 		{
-			if ( _y > 0 )
-			{
-				return Quadrant::north_east;
-			}
-			else if ( _y < 0 )
-			{
-				return Quadrant::south_east;
-			}
+			if ( _y > 0 ) { return Quadrant::north_east; }
+			else if ( _y < 0 ) { return Quadrant::south_east; }
 			else
 			{
 				return Quadrant::east;
@@ -171,14 +144,8 @@ namespace mazs
 		}
 		else if ( _x < 0 )
 		{
-			if ( _y > 0 )
-			{
-				return Quadrant::north_west;
-			}
-			else if ( _y < 0 )
-			{
-				return Quadrant::south_west;
-			}
+			if ( _y > 0 ) { return Quadrant::north_west; }
+			else if ( _y < 0 ) { return Quadrant::south_west; }
 			else
 			{
 				return Quadrant::west;
@@ -186,14 +153,8 @@ namespace mazs
 		}
 		else
 		{
-			if ( _y > 0 )
-			{
-				return Quadrant::north;
-			}
-			else if ( _y < 0 )
-			{
-				return Quadrant::south;
-			}
+			if ( _y > 0 ) { return Quadrant::north; }
+			else if ( _y < 0 ) { return Quadrant::south; }
 		}
 		return Quadrant::centre;
 	}
@@ -202,21 +163,21 @@ namespace mazs
 
 auto run() -> int
 {
-	auto message{ "アニメはすき！"s };
+	auto message { "アニメはすき！"s };
 
 	std::println( "{}", message );
 
-	auto a{ 40 };
-	auto b{ 2 };
+	auto a { 40 };
+	auto b { 2 };
 
 	std::println( "The answer is {}", mazs::add_stuff( a, b ) );
 
-	std::vector v{ 1, 1, 2, 3, 5, 8 };
-	auto        result{ mazs::accumulate_numeric( v ) };
+	std::vector v { 1, 1, 2, 3, 5, 8 };
+	auto        result { mazs::accumulate_numeric( v ) };
 
 	std::println( "The sum of the vector elements is {}.", result );
 
-	mazs::Point p{ a, b };
+	mazs::Point p { a, b };
 
 	std::println( "I'm a point at {}, {}.", p.x(), p.y() );
 	std::println( "\tThat's {} btw.", mazs::cardinal_points.at( p.where_am_i() ) );
