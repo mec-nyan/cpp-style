@@ -1,8 +1,12 @@
 ---
 Language:        Cpp
-AccessModifierOffset: -1               # We're using tabs.  This is one tab to the left.
-AlignAfterOpenBracket: Align
+
+AccessModifierOffset: -4               # We're using tabs.  This is one tab to the left.
+
+AlignAfterOpenBracket: true
+
 AlignArrayOfStructures: Left
+
 AlignConsecutiveAssignments:
   Enabled:         true
   AcrossEmptyLines: false
@@ -131,8 +135,8 @@ BreakTemplateDeclarations: MultiLine
 ColumnLimit:     100
 CommentPragmas:  '^ IWYU pragma:'
 CompactNamespaces: false
-ConstructorInitializerIndentWidth: 1
-ContinuationIndentWidth: 1
+ConstructorInitializerIndentWidth: 4
+ContinuationIndentWidth: 4
 Cpp11BracedListStyle: true
 DerivePointerAlignment: false
 DisableFormat:   false
@@ -171,7 +175,7 @@ IndentExternBlock: AfterExternBlock
 IndentGotoLabels: true
 IndentPPDirectives: None
 IndentRequiresClause: true
-IndentWidth:     1
+IndentWidth:     4
 IndentWrappedFunctionNames: false
 InsertBraces:    false
 InsertNewlineAtEOF: false
@@ -198,7 +202,7 @@ MainIncludeChar: Quote
 MaxEmptyLinesToKeep: 2
 NamespaceIndentation: All
 ObjCBinPackProtocolList: Auto
-ObjCBlockIndentWidth: 1
+ObjCBlockIndentWidth: 4
 ObjCBreakBeforeNestedBlockParam: true
 ObjCSpaceAfterProperty: false
 ObjCSpaceBeforeProtocolList: true
@@ -283,7 +287,7 @@ StatementMacros:
   - Q_UNUSED
   - QT_REQUIRE_VERSION
 TableGenBreakInsideDAGArg: DontBreak
-TabWidth:        1
+TabWidth:        4
 UseTab:          AlignWithSpaces
 VerilogBreakBetweenInstancePorts: true
 WhitespaceSensitiveMacros:

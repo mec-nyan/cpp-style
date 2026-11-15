@@ -9,6 +9,7 @@
 //
 // ---
 
+#include <cstdint>
 #include <format>
 #include <print>
 #include <unordered_map>
@@ -23,6 +24,10 @@ namespace mazs
 	auto add_stuff( int a, int b ) -> int;
 
 	auto accumulate_numeric( const std::vector<int>& v ) -> double;
+
+	auto too_many_arguments( std::string first, std::string middle, std::string last,
+	                         std::string street, uint8_t street_number, uint8_t phone_number )
+		-> bool;
 
 	enum class Quadrant
 	{
