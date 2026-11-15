@@ -85,26 +85,41 @@ namespace mazs
 auto run() -> int;
 
 
-auto main( int argc, char* argv[] ) -> int { return run(); }
+auto main( int argc, char* argv[] ) -> int
+{
+	return run();
+}
 
 
 // Namespaces and declarations (usually on an implementation file):
 namespace mazs
 {
-	auto add_stuff( int a, int b ) -> int { return a + b; }
+	auto add_stuff( int a, int b ) -> int
+	{
+		return a + b;
+	}
 
 	auto accumulate_numeric( const std::vector<int>& v ) -> double
 	{
 		double result { 0 };
 
-		for ( auto& n : v ) { result += n; }
+		for ( auto& n : v )
+		{
+			result += n;
+		}
 
 		return result;
 	}
 
-	auto Point::x() const -> int { return _x; }
+	auto Point::x() const -> int
+	{
+		return _x;
+	}
 
-	auto Point::y() const -> int { return _y; }
+	auto Point::y() const -> int
+	{
+		return _y;
+	}
 
 	auto Point::move( int x, int y ) -> Point&
 	{
@@ -140,8 +155,14 @@ namespace mazs
 	{
 		if ( _x > 0 )
 		{
-			if ( _y > 0 ) { return Quadrant::north_east; }
-			else if ( _y < 0 ) { return Quadrant::south_east; }
+			if ( _y > 0 )
+			{
+				return Quadrant::north_east;
+			}
+			else if ( _y < 0 )
+			{
+				return Quadrant::south_east;
+			}
 			else
 			{
 				return Quadrant::east;
@@ -149,8 +170,14 @@ namespace mazs
 		}
 		else if ( _x < 0 )
 		{
-			if ( _y > 0 ) { return Quadrant::north_west; }
-			else if ( _y < 0 ) { return Quadrant::south_west; }
+			if ( _y > 0 )
+			{
+				return Quadrant::north_west;
+			}
+			else if ( _y < 0 )
+			{
+				return Quadrant::south_west;
+			}
 			else
 			{
 				return Quadrant::west;
@@ -158,8 +185,14 @@ namespace mazs
 		}
 		else
 		{
-			if ( _y > 0 ) { return Quadrant::north; }
-			else if ( _y < 0 ) { return Quadrant::south; }
+			if ( _y > 0 )
+			{
+				return Quadrant::north;
+			}
+			else if ( _y < 0 )
+			{
+				return Quadrant::south;
+			}
 		}
 		return Quadrant::centre;
 	}

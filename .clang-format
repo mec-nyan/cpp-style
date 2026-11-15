@@ -45,39 +45,12 @@ AlignConsecutiveMacros:
 
 AlignConsecutiveShortCaseStatements:
   Enabled:         true
-  AcrossEmptyLines: false
+  AcrossEmptyLines: true
   AcrossComments:  true
   AlignCaseArrows: true
   AlignCaseColons: true
 
-AlignConsecutiveTableGenBreakingDAGArgColons:
-  Enabled:         false
-  AcrossEmptyLines: false
-  AcrossComments:  false
-  AlignCompound:   false
-  AlignFunctionDeclarations: false
-  AlignFunctionPointers: false
-  PadOperators:    false
-
-AlignConsecutiveTableGenCondOperatorColons:
-  Enabled:         false
-  AcrossEmptyLines: false
-  AcrossComments:  false
-  AlignCompound:   false
-  AlignFunctionDeclarations: false
-  AlignFunctionPointers: false
-  PadOperators:    false
-
-AlignConsecutiveTableGenDefinitionColons:
-  Enabled:         false
-  AcrossEmptyLines: false
-  AcrossComments:  false
-  AlignCompound:   false
-  AlignFunctionDeclarations: false
-  AlignFunctionPointers: false
-  PadOperators:    false
-
-AlignEscapedNewlines: Right
+AlignEscapedNewlines: LeftWithLastLine
 
 AlignOperands:   Align
 
@@ -91,7 +64,7 @@ AllowAllParametersOfDeclarationOnNextLine: true
 
 AllowBreakBeforeNoexceptSpecifier: Never
 
-AllowShortBlocksOnASingleLine: Always
+AllowShortBlocksOnASingleLine: Empty
 
 AllowShortCaseExpressionOnASingleLine: true
 
@@ -101,12 +74,14 @@ AllowShortCompoundRequirementOnASingleLine: true
 
 AllowShortEnumsOnASingleLine: true
 
-AllowShortFunctionsOnASingleLine: All
+AllowShortFunctionsOnASingleLine: Empty
 
+# NOTE: Won't apply to blocks!
 AllowShortIfStatementsOnASingleLine: AllIfsAndElse
 
 AllowShortLambdasOnASingleLine: All
 
+# NOTE: Won't apply to blocks!
 AllowShortLoopsOnASingleLine: true
 
 AllowShortNamespacesOnASingleLine: true
