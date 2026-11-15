@@ -88,8 +88,7 @@ namespace mazs
 		uint8_t x;
 		uint8_t y;
 	};
-
-}  // namespace mazs
+}   // namespace mazs
 
 
 auto run() -> int;
@@ -213,7 +212,7 @@ namespace mazs
 		}
 		return Quadrant::centre;
 	}
-}  // namespace mazs
+}   // namespace mazs
 
 
 auto run() -> int

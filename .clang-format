@@ -341,22 +341,7 @@ SpaceBeforeCtorInitializerColon: true
 
 SpaceBeforeInheritanceColon: true
 
-SpaceBeforeJsonColon: false
-
 SpaceBeforeParens: ControlStatements
-
-SpaceBeforeParensOptions:
-  AfterControlStatements: true
-  AfterForeachMacros: true
-  AfterFunctionDefinitionName: false
-  AfterFunctionDeclarationName: false
-  AfterIfMacros:   true
-  AfterNot:        true
-  AfterOverloadedOperator: false
-  AfterPlacementOperator: true
-  AfterRequiresInClause: false
-  AfterRequiresInExpression: false
-  BeforeNonEmptyParentheses: true
 
 SpaceBeforeRangeBasedForLoopColon: true
 
@@ -364,7 +349,7 @@ SpaceBeforeSquareBrackets: false
 
 SpaceInEmptyBlock: false
 
-SpacesBeforeTrailingComments: 2
+SpacesBeforeTrailingComments: 3
 
 SpacesInAngles:  Never
 
@@ -382,7 +367,7 @@ SpacesInParensOptions:
   InEmptyParentheses: false
   Other:           true
 
-SpacesInSquareBrackets: true
+SpacesInSquareBrackets: false
 
 Standard:        Latest
 
@@ -393,13 +378,9 @@ StatementMacros:
   - Q_UNUSED
   - QT_REQUIRE_VERSION
 
-TableGenBreakInsideDAGArg: DontBreak
-
 TabWidth:        4
 
 UseTab:          AlignWithSpaces
-
-VerilogBreakBetweenInstancePorts: true
 
 WhitespaceSensitiveMacros:
   - BOOST_PP_STRINGIZE
@@ -408,6 +389,6 @@ WhitespaceSensitiveMacros:
   - PP_STRINGIZE
   - STRINGIZE
 
-WrapNamespaceBodyWithEmptyLines: Leave
+WrapNamespaceBodyWithEmptyLines: Never
 
 ...
