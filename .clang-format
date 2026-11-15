@@ -101,37 +101,32 @@ BinPackParameters: BinPack
 
 BitFieldColonSpacing: Both
 
-BracedInitializerIndentWidth: -1
+# BracedInitializerIndentWidth: -1
 
 BraceWrapping:
   AfterCaseLabel:  false
   AfterClass:      true
-  AfterControlStatement: Always
+  AfterControlStatement: Never
   AfterEnum:       true
   AfterExternBlock: true
   AfterFunction:   true
   AfterNamespace:  true
-  AfterObjCDeclaration: true
   AfterStruct:     true
-  AfterUnion:      false
+  AfterUnion:      true
   BeforeCatch:     true
-  BeforeElse:      true
+  BeforeElse:      false
   BeforeLambdaBody: false
   BeforeWhile:     false
   IndentBraces:    false
-  SplitEmptyFunction: true
-  SplitEmptyRecord: true
-  SplitEmptyNamespace: true
+  SplitEmptyFunction: false
+  SplitEmptyRecord: false
+  SplitEmptyNamespace: false
 
 BreakAdjacentStringLiterals: true
 
 BreakAfterAttributes: Leave
 
-BreakAfterJavaFieldAnnotations: false
-
 BreakAfterReturnType: None
-
-BreakArrays:     true
 
 BreakBeforeBinaryOperators: None
 
@@ -147,11 +142,11 @@ BreakBeforeTernaryOperators: true
 
 BreakBinaryOperations: Never
 
-BreakConstructorInitializers: BeforeColon
+BreakConstructorInitializers: BeforeComma
 
 BreakFunctionDefinitionParameters: false
 
-BreakInheritanceList: BeforeColon
+BreakInheritanceList: BeforeComma
 
 BreakStringLiterals: true
 
@@ -213,9 +208,9 @@ IncludeIsMainSourceRegex: ''
 
 IndentAccessModifiers: false
 
-IndentCaseBlocks: false
+IndentCaseBlocks: true
 
-IndentCaseLabels: false
+IndentCaseLabels: true
 
 IndentExportBlock: true
 
@@ -235,8 +230,6 @@ InsertBraces:    false
 
 InsertNewlineAtEOF: false
 
-InsertTrailingCommas: None
-
 IntegerLiteralSeparator:
   Binary:          4
   BinaryMinDigits: 5
@@ -244,10 +237,6 @@ IntegerLiteralSeparator:
   DecimalMinDigits: 4
   Hex:             2
   HexMinDigits:    3
-
-JavaScriptQuotes: Leave
-
-JavaScriptWrapImports: true
 
 KeepEmptyLines:
   AtEndOfFile:     false
@@ -258,7 +247,7 @@ KeepFormFeed:    false
 
 LambdaBodyIndentation: Signature
 
-LineEnding:      DeriveLF
+LineEnding:      LF
 
 MacroBlockBegin: ''
 
@@ -270,19 +259,9 @@ MaxEmptyLinesToKeep: 2
 
 NamespaceIndentation: All
 
-ObjCBinPackProtocolList: Auto
+OneLineFormatOffRegex: ^// Just don't ...$
 
-ObjCBlockIndentWidth: 4
-
-ObjCBreakBeforeNestedBlockParam: true
-
-ObjCSpaceAfterProperty: false
-
-ObjCSpaceBeforeProtocolList: true
-
-OneLineFormatOffRegex: ''
-
-PackConstructorInitializers: BinPack
+PackConstructorInitializers: CurrentLine
 
 PenaltyBreakAssignment: 2
 
@@ -328,7 +307,7 @@ RemoveSemicolon: false
 
 RequiresClausePosition: OwnLine
 
-RequiresExpressionIndentation: OuterScope
+RequiresExpressionIndentation: Keyword
 
 SeparateDefinitionBlocks: Leave
 
@@ -339,8 +318,6 @@ SkipMacroDefinitionBody: false
 SortIncludes:
   Enabled:         true
   IgnoreCase:      false
-
-SortJavaStaticImport: Before
 
 SortUsingDeclarations: LexicographicNumeric
 

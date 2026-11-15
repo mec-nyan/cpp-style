@@ -15,10 +15,12 @@
 #include <unordered_map>
 #include <vector>
 
-
 using namespace std::literals;
 
 // Namespaces and definitions (usually on a header file):
+namespace empty
+{}
+
 namespace mazs
 {
 	auto add_stuff( int a, int b ) -> int;
@@ -55,6 +57,8 @@ namespace mazs
 		{Quadrant::north_west, "North west"},
 	};
 
+	auto operator<<( std::ostream& os, Quadrant q ) -> std::ostream&;
+
 	class Point
 	{
 	public:
@@ -77,6 +81,12 @@ namespace mazs
 	private:
 		int _x { 0 };
 		int _y { 0 };
+	};
+
+	struct Coordinates
+	{
+		uint8_t x;
+		uint8_t y;
 	};
 
 }  // namespace mazs
@@ -103,12 +113,37 @@ namespace mazs
 	{
 		double result { 0 };
 
-		for ( auto& n : v )
-		{
+		for ( auto& n : v ) {
 			result += n;
 		}
 
 		return result;
+	}
+
+	auto operator<<( std::ostream& os, Quadrant q ) -> std::ostream&
+	{
+		switch ( q ) {
+			case Quadrant::centre:
+				return os << "centre"s;
+			case Quadrant::south:
+				return os << "south"s;
+			case Quadrant::west:
+				return os << "west"s;
+			case Quadrant::north:
+				return os << "north"s;
+			case Quadrant::east:
+				return os << "east"s;
+			case Quadrant::south_east:
+				return os << "south east"s;
+			case Quadrant::south_west:
+				return os << "south west"s;
+			case Quadrant::north_east:
+				return os << "north east"s;
+			case Quadrant::north_west:
+				return os << "north west"s;
+		}
+
+		return os;
 	}
 
 	auto Point::x() const -> int
@@ -153,44 +188,26 @@ namespace mazs
 
 	auto Point::where_am_i() -> Quadrant
 	{
-		if ( _x > 0 )
-		{
-			if ( _y > 0 )
-			{
+		if ( _x > 0 ) {
+			if ( _y > 0 ) {
 				return Quadrant::north_east;
-			}
-			else if ( _y < 0 )
-			{
+			} else if ( _y < 0 ) {
 				return Quadrant::south_east;
-			}
-			else
-			{
+			} else {
 				return Quadrant::east;
 			}
-		}
-		else if ( _x < 0 )
-		{
-			if ( _y > 0 )
-			{
+		} else if ( _x < 0 ) {
+			if ( _y > 0 ) {
 				return Quadrant::north_west;
-			}
-			else if ( _y < 0 )
-			{
+			} else if ( _y < 0 ) {
 				return Quadrant::south_west;
-			}
-			else
-			{
+			} else {
 				return Quadrant::west;
 			}
-		}
-		else
-		{
-			if ( _y > 0 )
-			{
+		} else {
+			if ( _y > 0 ) {
 				return Quadrant::north;
-			}
-			else if ( _y < 0 )
-			{
+			} else if ( _y < 0 ) {
 				return Quadrant::south;
 			}
 		}
